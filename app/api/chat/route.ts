@@ -1,1 +1,12 @@
+import { NextResponse } from "next/server";
+
+export async function POST(req: Request) {
+  const { message } = await req.json();
+
+  // Example: Simple test reply
+  const reply = `You said: ${message}`;
+
+  return NextResponse.json({ reply });
+}
+
 
